@@ -1,0 +1,12 @@
+{
+  "name": "AntsRace",
+  "displayName": "AntsRace",
+  "expo": {
+    "name": "AntsRace",
+    "slug": "AntsRace",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
