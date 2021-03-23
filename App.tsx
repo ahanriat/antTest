@@ -1,19 +1,17 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React from 'react'
+import { ApolloAppProvider } from './src/providers/ApolloProvider'
+import { AppInitProvider } from './src/providers/AppInitProvider'
+import { SafeAreaProvider } from 'react-native-safe-area-context'
+import AppRootNavigator from '~/navigation/AppRootNavigator'
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-    </View>
-  );
+    <ApolloAppProvider>
+      <SafeAreaProvider>
+        <AppInitProvider>
+          <AppRootNavigator />
+        </AppInitProvider>
+      </SafeAreaProvider>
+    </ApolloAppProvider>
+  )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
